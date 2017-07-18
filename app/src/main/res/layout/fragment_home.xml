@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.todropfu_upju.HomeFragment">
+    <!-- map -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="-40dp">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mapZoomIn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_bg_login"
+                android:padding="10dp"
+                android:src="@drawable/ic_add" />
+
+            <ImageView
+                android:id="@+id/mapZoomOut"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_bg_login"
+                android:padding="10dp"
+                android:src="@drawable/ic_minus" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <View
+            android:id="@+id/centerGuide"
+            android:layout_width="2dp"
+            android:layout_height="45dp"
+            android:orientation="vertical"
+            android:background="@color/md_grey_300"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/centerGuide"
+            app:layout_constraintHorizontal_bias="0.2"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="출/퇴근 표시가 가능합니다."
+                android:textSize="7sp"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="출/퇴근 서비스"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/md_black_1000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="출근"
+                android:background="@drawable/btn_bg_regsuccess"
+                android:textColor="@color/md_white_1000"
+                android:paddingRight="20dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="10sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="@+id/centerGuide"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center_vertical"
+            app:layout_constraintHorizontal_bias="0.3">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500원 과금됩니다."
+                android:textSize="7sp"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="알림 서비스"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/md_black_1000"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="알림 보내기"
+                android:background="@drawable/btn_bg_regsuccess"
+                android:textColor="@color/md_white_1000"
+                android:paddingRight="20dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="10sp"
+                />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/homeRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.55"
+        android:background="@color/md_grey_300"/>
+</LinearLayout>

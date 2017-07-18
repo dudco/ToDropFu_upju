@@ -1,0 +1,253 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+  <data>
+    <variable
+        name="udata"
+        type="com.todropfu_upju.ProfileFragment.UserData"/>
+    <variable
+        name="card"
+        type="com.todropfu_upju.ProfileFragment.CreditCardData"/>
+  </data>
+  <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      tools:context="com.todropfu.BillFragment">
+
+    <TextView
+        android:id="@+id/textMyInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내 정보"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="start"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:font='@{ "nbg_normal" }'/>
+
+    <LinearLayout
+        android:id="@+id/userNameContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textMyInfo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/md_white_1000"
+        android:padding="15dp">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="사용자 이름"
+          android:textSize="10sp"
+          android:textColor="@color/colorPrimary"
+          android:layout_marginBottom="5dp"
+          />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@{udata.name}"
+          tools:text="두부넘버원"
+          android:textSize="16sp"
+          android:textColor="@color/md_black_1000"
+          />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/userHomeContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/userNameContainer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/md_white_1000"
+        android:padding="15dp"
+        android:layout_marginTop="10dp">
+
+      <TextView
+          android:id="@+id/textHome"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="On을 통해 결제가 가능해집니다."
+          android:textSize="10sp"
+          android:textColor="@color/colorPrimary"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:layout_editor_absoluteX="0dp" />
+      <TextView
+          android:id="@+id/textHomeDesc"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="앱 결제 가능 여부"
+          android:layout_marginTop="5dp"
+          android:textSize="15sp"
+          android:textColor="@color/md_black_1000"
+          app:layout_constraintTop_toBottomOf="@+id/textHome"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          tools:layout_editor_absoluteX="0dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/card"
+        android:orientation="vertical"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/userHomeContainer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="8dp">
+      <android.support.v7.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:padding="25dp">
+          <TextView
+              android:id="@+id/cardName"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@{card.name}"
+              tools:text="신한카드"
+              android:textSize="30sp"
+              android:textColor="@color/md_white_1000"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintRight_toRightOf="parent"
+              android:font='@{ "nbg_bold" }' />
+
+          <android.support.constraint.Guideline
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/guideline"
+              app:layout_constraintGuide_begin="35dp"
+              android:orientation="vertical"
+              tools:layout_editor_absoluteY="251dp"
+              tools:layout_editor_absoluteX="70dp" />
+
+          <TextView
+              android:id="@+id/cardNum1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="6223"
+              tools:text="6223"
+              app:layout_constraintRight_toLeftOf="@+id/cardNum2"
+              app:layout_constraintLeft_toLeftOf="@+id/guideline"
+              app:layout_constraintHorizontal_chainStyle="spread_inside"
+              app:layout_constraintHorizontal_bias="0.8"
+              app:layout_constraintBaseline_toBaselineOf="@+id/cardNum2"
+              android:textColor="@color/md_white_1000"
+              android:textSize="17sp"
+              android:font='@{ "nbg_normal" }'/>
+          <TextView
+              android:id="@+id/cardNum2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/card_behind_num"
+              app:layout_constraintLeft_toRightOf="@+id/cardNum1"
+              app:layout_constraintRight_toLeftOf="@+id/cardNum3"
+              app:layout_constraintBaseline_toBaselineOf="@+id/cardNum3"
+              android:textColor="@color/md_white_1000"
+              android:textSize="17sp"
+              android:font='@{ "nbg_normal" }'/>
+          <TextView
+              android:id="@+id/cardNum3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/card_behind_num"
+              app:layout_constraintLeft_toRightOf="@+id/cardNum2"
+              app:layout_constraintRight_toLeftOf="@+id/cardNum4"
+              app:layout_constraintBaseline_toBaselineOf="@+id/cardNum4"
+              android:textColor="@color/md_white_1000"
+              android:textSize="17sp"
+              android:font='@{ "nbg_normal" }'/>
+          <TextView
+              android:id="@+id/cardNum4"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="5147"
+              app:layout_constraintLeft_toRightOf="@+id/cardNum3"
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/cardName"
+              android:layout_marginTop="35dp"
+              android:textColor="@color/md_white_1000"
+              android:textSize="17sp"
+              android:font='@{ "nbg_normal" }'/>
+
+          <TextView
+              android:id="@+id/cardDate"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@{card.date}"
+              tools:text="05/21"
+              app:layout_constraintRight_toLeftOf="@+id/cardType"
+              android:layout_marginRight="20dp"
+              app:layout_constraintBaseline_toBaselineOf="@+id/cardType"
+              android:textColor="@color/md_white_1000"
+              android:textSize="24sp"
+              android:font='@{ "nbg_bold" }'
+              android:layout_marginEnd="20dp" />
+
+          <TextView
+              android:id="@+id/cardType"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="VISA"
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/cardNum4"
+              android:layout_marginTop="15dp"
+              android:textColor="@color/md_white_1000"
+              android:textStyle="italic|bold"
+              android:textSize="30sp"
+              />
+
+        </android.support.constraint.ConstraintLayout>
+      </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnAddCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/card"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_bg_addcard"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp">
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" 
+          android:src="@drawable/ic_card_add"
+          android:layout_marginRight="4dp"
+          android:layout_marginEnd="4dp"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="카드수정하기"
+          android:textSize="12sp"
+          android:textColor="@color/md_white_1000"
+          android:font= '@{ "nbg_bold" }'
+          android:layout_marginRight="5dp"
+          android:layout_marginEnd="5dp"/>
+    </LinearLayout>
+  </android.support.constraint.ConstraintLayout>
+</layout>

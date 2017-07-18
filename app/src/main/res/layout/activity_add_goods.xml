@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.todropfu_upju.AddGoodsActivity">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/addGoodsToolbar"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@color/colorPrimary">
+
+        </android.support.v7.widget.Toolbar>
+        <TextView
+            android:id="@+id/thumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="썸네일 이미지"/>
+        <ImageView
+            android:id="@+id/thumImage"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/thumText"
+            android:foreground="@drawable/bg_thumnailbox"/>
+        <TextView
+            android:id="@+id/btnImageAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이미지 추가하기"
+            app:layout_constraintLeft_toRightOf="@id/thumImage"
+            app:layout_constraintBottom_toBottomOf="@id/thumImage"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/btn_bg_call"
+            android:textSize="10sp"
+            android:textColor="@color/md_white_1000"
+            android:paddingStart="26dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:paddingEnd="26dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnImageAdd"
+            android:orientation="vertical">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="상품 이름"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="상품 타입"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="상품 가격"/>
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>
