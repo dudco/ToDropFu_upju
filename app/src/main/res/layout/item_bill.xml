@@ -11,7 +11,7 @@
     </data>
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="140dp"
         android:layout_margin="20dp"
         app:cardCornerRadius="3dp">
         <android.support.constraint.ConstraintLayout
@@ -48,17 +48,17 @@
                 >
                 <ImageView
                     android:id="@+id/truckImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_truck"/>
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_profile_selected"/>
                 <TextView
                     android:id="@+id/itemBillTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="@{bill.storeName}"
-                    tools:text="따듯한 트럭"
-                    android:textSize="22sp"
+                    android:text="@{bill.username}"
+                    tools:text="두부 넘버원"
+                    android:textSize="18sp"
                     android:font='@{"nbg_bold"}'
                     android:layout_marginLeft="10dp"
                     android:layout_marginStart="10dp"
@@ -79,7 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="금액"
-                    android:textSize="10sp"
+                    android:textSize="7sp"
                     android:textColor="@color/colorPrimaryDark"
                     android:font='@{"nbg_light"}'/>
                 <LinearLayout
@@ -94,7 +94,7 @@
                         android:layout_height="wrap_content"
                         android:text="@{bill.price}"
                         tools:text="2,000"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:shadowColor="@color/md_black_1000"
                         android:font='@{"nbg_normal"}'/>
 
@@ -102,7 +102,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="원"
-                        android:textSize="12sp"
+                        android:textSize="10sp"
                         android:layout_marginLeft="3dp"
                         android:textColor="@color/md_black_1000"
                         android:font='@{"nbg_ulight"}'/>
@@ -121,8 +121,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="구매 날짜"
-                    android:textSize="10sp"
+                    android:text="판매 날짜"
+                    android:textSize="7sp"
                     android:textColor="@color/colorPrimaryDark"
                     android:font='@{"nbg_light"}'/>
                 <LinearLayout
@@ -137,7 +137,7 @@
                         android:layout_height="wrap_content"
                         android:text="@{bill.year}"
                         tools:text="2017"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:shadowColor="@color/md_black_1000"
                         android:font='@{"nbg_normal"}'/>
 
@@ -145,7 +145,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="년"
-                        android:textSize="12sp"
+                        android:textSize="10sp"
                         android:layout_marginLeft="3dp"
                         android:textColor="@color/md_black_1000"
                         android:font='@{"nbg_ulight"}'/>
@@ -156,7 +156,7 @@
                         android:layout_height="wrap_content"
                         android:text="@{bill.month}"
                         tools:text="5"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:shadowColor="@color/md_black_1000"
                         android:font='@{"nbg_normal"}'/>
 
@@ -164,7 +164,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="월"
-                        android:textSize="12sp"
+                        android:textSize="10sp"
                         android:layout_marginLeft="3dp"
                         android:textColor="@color/md_black_1000"
                         android:font='@{"nbg_ulight"}'/>
@@ -175,7 +175,7 @@
                         android:layout_height="wrap_content"
                         android:text="@{bill.day}"
                         tools:text="23"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:shadowColor="@color/md_black_1000"
                         android:font='@{"nbg_normal"}'/>
 
@@ -183,7 +183,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="일"
-                        android:textSize="12sp"
+                        android:textSize="10sp"
                         android:layout_marginLeft="3dp"
                         android:textColor="@color/md_black_1000"
                         android:font='@{"nbg_ulight"}'/>
@@ -217,7 +217,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="구매한 품목"
+                    android:text="판매한 품목"
                     android:textSize="7sp"
                     android:font='@{"nbg_normal"}'/>
                 <TextView

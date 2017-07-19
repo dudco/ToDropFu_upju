@@ -7,6 +7,9 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
 
     <application
         android:allowBackup="true"
@@ -25,6 +28,22 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity" />
 
+        <activity
+          android:name="com.facebook.FacebookActivity"
+          android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+          android:label="@string/app_name" />
+        <activity
+          android:name="com.facebook.CustomTabActivity"
+          android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="fb2018584545036745" />
+            </intent-filter>
+        </activity>
+
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -32,7 +51,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBigBqeWBVOQ8cRfQwyRSYwAnQcLT13KEc" />
 
-        <activity android:name=".AddGoodsActivity"></activity>
+        <activity android:name=".AddGoodsActivity"/>
     </application>
 
 </manifest>
